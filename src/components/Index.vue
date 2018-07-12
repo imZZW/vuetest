@@ -1,25 +1,20 @@
 <template>
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3 text-center">
-          <h1>{{ message }}</h1>
-        </div>
-      </div>
-    </div>
-  </main>
+<div id="index">
+  <head-nav></head-nav>
+  <welcome></welcome>
+</div>
 </template>
 
 <script>
 import Vue from 'vue'
-import VueResourc from 'vue-resource'
+import headNav from './headNav'
+import welcome from './welcome'
+
+Vue.component('head-nav', headNav)
+Vue.component('welcome', welcome)
+
 export default {
-  name: 'Index',
-  data () {
-    return {
-      message: '欢迎使用本系统'
-    }
-  }
+  name: 'Index'
 }
 </script>
 
